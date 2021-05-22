@@ -41,6 +41,31 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /caffee:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: caffee
+    get:
+      description: Returns list of caffees
+      # used as the method name of the controller
+      operationId: caffee
+      parameters:
+        - name: name
+          in: query
+          description: The name of the person to whom to say hello
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/CaffeeResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+            
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -62,7 +87,23 @@ definitions:
         type: string
       avatar:
         type: string
-  
+        
+  CaffeeResponse:
+    type: array
+    items:
+      $ref: "#/definitions/Caffee"   
+        
+  Caffee:
+    properties:
+      name:
+        type: string
+      address:
+        type: string
+      caffeedescription:
+        type: string
+      companyname:
+        type: string
+
   ErrorResponse:
     required:
       - message
