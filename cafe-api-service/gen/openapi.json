@@ -137,9 +137,11 @@
           },
           "city" : {
             "type" : "string"
+            
           },
           "image" : {
             "type" : "string"
+
           }
         }
       },

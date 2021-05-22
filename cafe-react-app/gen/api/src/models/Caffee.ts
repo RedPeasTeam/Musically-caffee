@@ -49,12 +49,14 @@ export interface Caffee {
      * @memberof Caffee
      */
     city?: string;
+
     /**
      * 
      * @type {string}
      * @memberof Caffee
      */
     image?: string;
+
 }
 
 export function CaffeeFromJSON(json: any): Caffee {
@@ -73,6 +75,7 @@ export function CaffeeFromJSONTyped(json: any, ignoreDiscriminator: boolean): Ca
         'companyname': !exists(json, 'companyname') ? undefined : json['companyname'],
         'city': !exists(json, 'city') ? undefined : json['city'],
         'image': !exists(json, 'image') ? undefined : json['image'],
+
     };
 }
 
@@ -91,6 +94,7 @@ export function CaffeeToJSON(value?: Caffee | null): any {
         'companyname': value.companyname,
         'city': value.city,
         'image': value.image,
+
     };
 }
 
