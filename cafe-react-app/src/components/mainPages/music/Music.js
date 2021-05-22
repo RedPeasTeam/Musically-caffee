@@ -27,7 +27,7 @@ class Music extends Component {
             <img src={music.image}></img>
             <div className="name">{music.genre}</div>
             <div className="title-min"></div>
-            <div className="song"><img src={music.avatar}></img>{music.author} {music.music}</div>
+            <div className="song"><img src={music.avatar}></img>{music.author} - {music.music}</div>
           </div>
         }
       )}

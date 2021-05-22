@@ -1,0 +1,154 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Musically Cafe",
+    "version" : "0.1.0"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:10010/api/v1"
+  } ],
+  "paths" : {
+    "/music" : {
+      "get" : {
+        "description" : "Returns list of music to the caller",
+        "operationId" : "music",
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "The name of the person to whom to say hello",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/MusicResponse"
+                }
+              }
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-swagger-router-controller" : "music"
+    },
+    "/caffee" : {
+      "get" : {
+        "description" : "Returns list of caffees",
+        "operationId" : "caffee",
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "The name of the person to whom to say hello",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/CaffeeResponse"
+                }
+              }
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-swagger-router-controller" : "caffee"
+    },
+    "/swagger" : {
+      "x-swagger-pipe" : "swagger_raw"
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "MusicResponse" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Music"
+        }
+      },
+      "Music" : {
+        "type" : "object",
+        "properties" : {
+          "image" : {
+            "type" : "string"
+          },
+          "genre" : {
+            "type" : "string"
+          },
+          "author" : {
+            "type" : "string"
+          },
+          "music" : {
+            "type" : "string"
+          },
+          "avatar" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CaffeeResponse" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Caffee"
+        }
+      },
+      "Caffee" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "address" : {
+            "type" : "string"
+          },
+          "caffeedescription" : {
+            "type" : "string"
+          },
+          "companyname" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ErrorResponse" : {
+        "required" : [ "message" ],
+        "type" : "object",
+        "properties" : {
+          "message" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
