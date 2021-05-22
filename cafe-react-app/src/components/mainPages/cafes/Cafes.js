@@ -24,10 +24,9 @@ class Cafes extends Component {
           return <div className="caffee-item">
             <img src={caffee.image}></img>
             <div className="name">{caffee.name}</div>
-            <div className="title-min"></div>
-            <div className="cafe-description"><span class="cafe-lorem">{caffee.caffeedescription}</span>
-            <span class="location">{caffee.city},{caffee.address}</span>
-            <span class="company-name">{caffee.companyname}</span>
+            <div className="cafe-description"><div class="cafe-lorem">{caffee.caffeedescription}</div>
+            <div class="location">{caffee.city},{caffee.address}</div>
+            <div class="company-name">Created by {caffee.companyname}</div>
             </div>
           </div>
         }
