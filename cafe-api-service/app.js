@@ -18,6 +18,9 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   app.listen(port);
 
   if (swaggerExpress.runner.swagger.paths['/music']) {
-    console.log('try this:\ncurl http://127.0.0.1:' + port + '/music');
+    console.log('try this:\ncurl http://127.0.0.1:' + port + '/api/v1/music');
+  }
+  if (swaggerExpress.runner.swagger.paths['/caffee']) {
+    console.log('try this:\ncurl http://127.0.0.1:' + port + '/api/v1/caffee');
   }
 });
