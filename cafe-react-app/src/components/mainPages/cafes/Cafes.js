@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import * as Api from 'typescript-fetch-api';
+// import * as Api from 'typescript-fetch-api';
 
 class Cafes extends Component {
 

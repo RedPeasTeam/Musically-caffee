@@ -14,7 +14,7 @@ class Header extends Component{
     const {quest} = this.state;
     return <div className='header-wrapper'>
       <div className='left'>
-        <span className='logo'>LAVR</span>
+        <span className='logo'>AniSpec</span>
         <LinkList />
       </div>
       <input placeholder='Search...' className='quest-inp' onChange={this.onChange} value={quest}/>

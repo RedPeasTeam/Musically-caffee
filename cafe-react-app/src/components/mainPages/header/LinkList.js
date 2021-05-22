@@ -7,11 +7,11 @@ class LinkList extends Component{
       <NavLink exact className='nav-item' activeClassName='nav-active' to='/'>
         <span>Home</span>
       </NavLink>
-      <NavLink exact className='nav-item' activeClassName='nav-active' to='/exhibition'>
-        <span>Exhibition</span>
+      <NavLink exact className='nav-item' activeClassName='nav-active' to='/cafes'>
+        <span>Cafe's list</span>
       </NavLink>
-      <NavLink exact className='nav-item' activeClassName='nav-active' to='/shop'>
-        <span>Shop</span>
+      <NavLink exact className='nav-item' activeClassName='nav-active' to='/music'>
+        <span>Music</span>
       </NavLink>
     </div>
   }

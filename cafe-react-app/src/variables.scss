@@ -1,30 +1,19 @@
-//color variables
-
 $black: #000000;
-$burg: #341D17;
-$brightYellow: #D9A774;
-$lightGrey: #756763;
-$beige: #F2EADE;
-
-//text color variables
+$brightGreen: #40d13b;
+$lightDarkGreen: #558557;
+$darkgrey: #161616;
 
 $txt_color0: $black;
-$txt_color1: $brightYellow;
-$txt_color2: $lightGrey;
-
-//border color variables
+$txt_color1: $brightGreen;
+$txt_color2: $lightDarkGreen;
 
 $brdr_color0: $black;
-$brdr_color1: $lightGrey;
-
-//background color variables
+$brdr_color1: $lightDarkGreen;
 
 $bg_color0: $black;
-$bg_color1: $burg;
-$bg_color2: $lightGrey;
-$bg_color3: $beige;
-
-//mixin
+$bg_color1: $black;
+$bg_color2: $lightDarkGreen;
+$bg_color3: $darkgrey;
 
 @mixin setFont($family, $weight, $size, $lineHeight) {
   font-family: $family, sans-serif;
