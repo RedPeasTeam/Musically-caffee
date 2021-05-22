@@ -103,6 +103,8 @@ definitions:
         type: string
       companyname:
         type: string
+      city:
+        type: string
 
   ErrorResponse:
     required:
