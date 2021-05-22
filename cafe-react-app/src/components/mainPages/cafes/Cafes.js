@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
-// import * as Api from 'typescript-fetch-api';
+import * as Api from 'typescript-fetch-api';
+
+const api = new Api.DefaultApi();
 
 class Cafes extends Component {
 
-    // constructor(props){
-  //   super(props);
-  //   this.state = { caffee: [] };
-  //   this.handleReload();
-  // }
-  // async handleReload(event) {
-  //   const response = await api.caffee({ date: '' });
-  //   this.setState({ caffee: response });
-  // }
+    constructor(props){
+    super(props);
+    this.state = { caffee: [] };
+    this.handleReload();
+  }
+  async handleReload(event) {
+    const response = await api.caffee({ date: '' });
+    this.setState({ caffee: response });
+  }
   render() {
     return <div className="container">
     <div className="title">Choose your cafe</div>

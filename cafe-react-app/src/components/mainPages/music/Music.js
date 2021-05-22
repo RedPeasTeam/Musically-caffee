@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-// import * as Api from 'typescript-fetch-api';
+import * as Api from 'typescript-fetch-api';
 
-// const api = new Api.DefaultApi();
+const api = new Api.DefaultApi();
 
 
 
 class Music extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state = { music: [] };
-  //   this.handleReload();
-  // }
-  // async handleReload(event) {
-  //   const response = await api.music({ date: '' });
-  //   this.setState({ music: response });
-  // }
+  constructor(props){
+    super(props);
+    this.state = { music: [] };
+    this.handleReload();
+  }
+  async handleReload(event) {
+    const response = await api.music({ date: '' });
+    this.setState({ music: response });
+  }
 
   render() {
     return <div className="container">
