@@ -18,7 +18,7 @@ class Music extends Component {
 
   render() {
     return <div className="container">
-    <div className="title">Choose your exhibition</div>
+    <div className="title">Our genres of music:</div>
     <div className="music">
       
       {this.state.music.map(
