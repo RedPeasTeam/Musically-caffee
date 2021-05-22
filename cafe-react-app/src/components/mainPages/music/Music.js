@@ -19,12 +19,12 @@ class Music extends Component {
   render() {
     return <div className="container">
     <div className="title">Choose your exhibition</div>
-    <div className="exhibitions">
+    <div className="music">
       
       {this.state.music.map(
         (music) => {
           return <div className="music-item">
-            <img src={music.imageexhibi}></img>
+            <img src={music.image}></img>
             <div className="name">{music.genre}</div>
             <div className="title-min"></div>
             <div className="song"><img src={music.avatar}></img>{music.author} {music.music}</div>
