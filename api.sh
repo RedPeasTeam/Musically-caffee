@@ -1,11 +1,11 @@
-cd api-service
+cd cafe-api-service
 rm -rf gen
 chmod +x swagger-yaml2json.sh
 bash swagger-yaml2json.sh
 yarn
 npm i
 
-cd ../react-app
+cd ../cafe-react-app
 rm -rf gen
 rm -rf node_modules/typescript-fetch-api
 yarn run api
