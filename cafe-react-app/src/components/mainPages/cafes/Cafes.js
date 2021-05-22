@@ -14,8 +14,8 @@ class Cafes extends Component {
   // }
   render() {
     return <div className="container">
-    <div className="title">Choose your exhibition</div>
-    <div className="exhibitions">
+    <div className="title">Choose your cafe</div>
+    <div className="caffee">
       
       {this.state.caffee.map(
         (caffee) => {
