@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import {Switch, Route} from 'react-router'
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import Exhibition from "./exhibition/Exhibition";
-import Shop from "./shop/Shop";
+import Music from "./music/Music";
+import Cafes from "./cafes/Cafes";
 import Home from "./home/Home";
 import NoMatch from "./noMatch/NoMatch";
 
 const ROUTES = [
   {path: '/', exact: true, component: Home},
-  {path: '/exhibition', exact: true, component: Exhibition},
-  {path: '/shop', exact: true, component: Shop},
+  {path: '/cafes', exact: true, component: Cafes},
+  {path: '/music', exact: true, component: Music},
   {path: '*', component: NoMatch},
 ];
 
