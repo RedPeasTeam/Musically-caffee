@@ -105,6 +105,8 @@ definitions:
         type: string
       city:
         type: string
+      image:
+        type: string
 
   ErrorResponse:
     required:

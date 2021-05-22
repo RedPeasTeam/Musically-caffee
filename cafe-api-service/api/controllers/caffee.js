@@ -39,6 +39,7 @@ function getCaffee(req, res) {
       address: "" + faker.address.city(),
       companyname: "" + faker.company.companyName(),
       city: "Minsk",
+      image: "" + faker.image.nature(),
     },
   ]);
 }
